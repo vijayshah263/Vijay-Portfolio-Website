@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vijay Shah — Portfolio</title>
+
+    <!-- Styles (kept external links and added dark-mode + toggle styles) -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+
+    
+    
+  </head>
+
+  <body>
+    <!-- DESKTOP NAV -->
+    <nav id="desktop-nav" aria-label="Main navigation">
+      <div class="logo">Vijay Shah</div>
+
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- THEME TOGGLE (with visible status) -->
+      <div class="toggle-wrapper" aria-hidden="false">
+        <div class="toggle" title="Toggle dark mode">
+          <input
+            type="checkbox"
+            id="switch"
+            aria-label="Toggle dark mode"
+            role="switch"
+          />
+          <label for="switch" class="slider" aria-hidden="true"></label>
+        </div>
+        <div id="theme-status">Light</div>
+      </div>
+    </nav>
+
+    <!-- HAMBURGER NAV (MOBILE) -->
+    <nav id="hamburger-nav" aria-label="Mobile navigation">
+      <div class="logo">Vijay Shah</div>
+
+      <div class="hamburger-menu">
+        <!-- hamburger icon -->
+        <button
+          class="hamburger-icon"
+          aria-label="Toggle menu"
+          onclick="toggleMenu()"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <!-- menu links (hidden/shown by toggleMenu) -->
+        <ul class="menu-links" id="mobileMenu" aria-hidden="true">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- PROFILE / HERO -->
+    <section id="profile" class="section section-profile">
+      <div class="section__pic-container">
+        <img
+          src="https://cdn.pixabay.com/photo/2024/10/01/10/43/man-9087914_1280.png"
+          alt="Vijay Shah profile picture"
+          class="profile-pic"
+        />
+      </div>
+
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Vijay Shah</h1>
+        <p class="section__text__p2">JavaScript Developer</p>
+
+        <div class="btn-container">
+          <div class="btn-container">
+            <a
+              href="https://drive.google.com/file/d/1ExulO9QENtrdEI08ak7-boXWt0UTXq4y/view"
+              target="_blank"
+              class="btn btn-color-2"
+              >Download CV</a
+            >
+          </div>
+
+          <button class="btn btn-color-1" onclick="location.href='#contact'">
+            Contact Info
+          </button>
+        </div>
+
+        <div id="socials-container" class="socials">
+          <!-- LinkedIn -->
+          <a
+            href="https://www.linkedin.com/in/vijay-shah-53511a392/"
+            target="_blank"
+            title="LinkedIn Profile"
+          >
+            <img src="./assets/linkedin.png" alt="LinkedIn" class="icon" />
+          </a>
+
+          <!-- GitHub -->
+          <a
+            href="https://github.com/vijayshah263"
+            target="_blank"
+            title="GitHub Profile"
+          >
+            <img src="./assets/github.png" alt="GitHub" class="icon" />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section section-about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="https://media.craiyon.com/2025-08-17/cNSQ6Oe0QpOlSp0PnPUrYA.webp"
+            alt="About picture"
+            class="about-pic"
+          />
+        </div>
+
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <p>6+ months <br />JavaScript Development</p>
+            </div>
+
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>B.Tech — Bachelor's Degree<br />Computer Science</p>
+            </div>
+          </div>
+
+          <div class="text-container">
+            <p>
+              Hey there! I'm Vijay Shah, a Computer Science graduate who loves
+              building things for the web. I've completed a 6-month internship
+              in web development and worked with JavaScript, React, Node.js,
+              Python, and MySQL. Right now, I'm learning the MERN Stack to grow
+              as a full-stack developer. I enjoy turning ideas into real,
+              user-friendly web apps and I'm always excited to learn something
+              new every day.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <img
+        src="./assets/arrow.png"
+        alt="Next section arrow"
+        class="icon arrow"
+        onclick="location.href='#experience'"
+      />
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section section-experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Frontend Development</h2>
+
+            <div class="article-container">
+              <article>
+                <img src="./assets/checkmark.png" alt="" class="icon" />
+                <div>
+                  <h3>HTML</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+
+              <article>
+                <img src="./assets/checkmark.png" alt="" class="icon" />
+                <div>
+                  <h3>CSS</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+
+              <article>
+                <img src="./assets/checkmark.png" alt="" class="icon" />
+                <div>
+                  <h3>React</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+
+              <article>
+                <img src="./assets/checkmark.png" alt="" class="icon" />
+                <div>
+                  <h3>JavaScript</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+
+              <article>
+                <img src="./assets/checkmark.png" alt="" class="icon" />
+                <div>
+                  <h3>TypeScript</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+
+              <article>
+                <img src="./assets/checkmark.png" alt="" class="icon" />
+                <div>
+                  <h3>Material UI</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="details-container">
+            <h2 class="experience-sub-title">Backend & Database</h2>
+
+            <div class="article-container">
+              <article>
+                <img src="./assets/checkmark.png" alt="" class="icon" />
+                <div>
+                  <h3>PostgreSQL</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+
+              <article>
+                <img src="./assets/checkmark.png" alt="" class="icon" />
+                <div>
+                  <h3>Node.js</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+
+              <article>
+                <img src="./assets/checkmark.png" alt="" class="icon" />
+                <div>
+                  <h3>MySQL</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+
+              <article>
+                <img src="./assets/checkmark.png" alt="" class="icon" />
+                <div>
+                  <h3>Express.js</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <img
+        src="./assets/arrow.png"
+        alt="Next section arrow"
+        class="icon arrow"
+        onclick="location.href='#projects'"
+      />
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section section-projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <!-- Project One -->
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="https://raw.githubusercontent.com/codedex-io/projects/main/projects/create-a-to-do-list-app-with-html-css-js/finished-todo-list.png"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+
+            <h2 class="experience-sub-title project-title">To Do List</h2>
+
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('REPLACE_WITH_GITHUB_PROJECT_1', '_blank')"
+              >
+                Github
+              </button>
+
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('REPLACE_WITH_LIVE_DEMO_1', '_blank')"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+
+          <!-- Project Two -->
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="https://i0.wp.com/www.xamnation.com/wp-content/uploads/2019/10/15442694664.jpg?fit=1024%2C711&ssl=1"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+
+            <h2 class="experience-sub-title project-title">E-commerce Website</h2>
+
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('REPLACE_WITH_GITHUB_PROJECT_2', '_blank')"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('REPLACE_WITH_LIVE_DEMO_2', '_blank')"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+
+          <!-- Project Three -->
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="https://www.datocms-assets.com/57355/1714382982-spotify-business.webp"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+
+            <h2 class="experience-sub-title project-title">Spotify Clone</h2>
+
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('REPLACE_WITH_GITHUB_PROJECT_3', '_blank')"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('REPLACE_WITH_LIVE_DEMO_3', '_blank')"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <img
+        src="./assets/arrow.png"
+        alt="Next section arrow"
+        class="icon arrow"
+        onclick="location.href='#contact'"
+      />
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section section-contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p>
+            <a href="mailto:vijayshah0502@gmail.com">shahvijayrajendra02@gmail.com</a>
+          </p>
+        </div>
+
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p>
+            <a
+              href="https://www.linkedin.com/in/vijay-shah-53511a392/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn</a
+            >
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <p>
+        Copyright &#169; <span id="year"></span> Vijay Shah. All Rights
+        Reserved.
+      </p>
+    </footer>
+<script src="script.js"></script>
+  </body>
+</html>
