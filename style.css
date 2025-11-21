@@ -170,9 +170,10 @@ section {
 
 .section__pic-container {
   display: flex;
-  height: 400px;
-  width: 400px;
+  height: 316px;
+  width: 401px; 
   margin: auto 0;
+  margin-bottom: 224px;
 }
 
 .section__text {
@@ -297,8 +298,8 @@ section {
   flex: 1;
   background: white;
   border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
+  border:0.1rem solid rgb(132, 129, 129);;
+  border-color: rgb(14, 13, 13);
   text-align: center;
 }
 
@@ -306,11 +307,14 @@ section {
   gap: 4rem;
   height: 80%;
 }
-
+.text-container p {
+    font-size: 20px;
+}
 .section__pic-container {
-  height: 400px;
+  height: 316px;
   width: 400px;
   margin: auto 0;
+  margin-bottom: 222px;
 }
 
 /* EXPERIENCE SECTION */
@@ -392,8 +396,8 @@ article .icon {
   display: flex;
   justify-content: center;
   border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
+  border: rgb(53, 53, 53) 0.2rem solid;
+  border-color: rgb(73, 71, 71);
   background: (250, 250, 250);
   margin: 2rem auto;
   padding: 0.5rem;
@@ -409,6 +413,7 @@ article .icon {
 
 .contact-info-container p {
   font-size: larger;
+      color: rgb(37 31 31);;
 }
 
 .contact-icon {
@@ -633,7 +638,7 @@ body {
   flex: 1;
   background: var(--card-bg);
   border-radius: 2rem;
-  border: 0.1rem solid rgba(163,163,163,0.18);
+  border: 0.2rem solid rgb(73, 71, 71);
   text-align: center;
   color: var(--text);
 }
@@ -641,7 +646,7 @@ body {
 /* project button and project text */
 .project-btn {
   color: var(--nav-link);
-  border-color: rgba(163,163,163,0.6);
+  border-color: #434343
 }
 
 /* icons fallback if you use inline svgs (not for img files) */
